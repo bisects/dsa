@@ -481,4 +481,63 @@ audio.addEventListener('ended', () => {
 
 <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" data-cf-beacon="{" rayid":"8c7717a818d765f0","version":"2024.8.0","r":1,"token":"576e71c0bf104774ae845d6f5c59d5f8","servertiming":{"name":{"cfextpri":true,"cfl4":true}}}"="" crossorigin="anonymous"></script>
 
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="js/script.js"></script> 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/scanlines.css">
+    
+    <style>
+        /* Existing styles */
+        
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            z-index: 9999;
+            pointer-events: none;
+            color: white;
+            font-size: 1.5em;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+
+<body class="w-screen h-[100%] crt" style="height: 100%;">
+
+    <div class="snowflakes" aria-hidden="true">
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+    </div>
+
+    <!-- Your existing HTML content -->
+
+    <script>
+        // Snowflake movement logic
+        (function() {
+            const snowflakes = document.querySelectorAll('.snowflake');
+            setInterval(() => {
+                snowflakes.forEach(snowflake => {
+                    snowflake.style.left = Math.random() * window.innerWidth + 'px';
+                    snowflake.style.animationDuration = (Math.random() * 
+
 </body></html>
